@@ -71,7 +71,7 @@ export function ContactPage({ onSuccess }: ContactPageProps) {
 
       {/* Main Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-12">
+        <div className="grid lg:grid-cols-12 gap-12 lg:items-start">
           {/* Direct Details */}
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-3">
@@ -148,14 +148,15 @@ export function ContactPage({ onSuccess }: ContactPageProps) {
               </a>
 
               {/* Office Location */}
-              <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-2 shadow-xs">
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-3 shadow-xs">
                 <span className="text-xs font-bold text-slate-500 flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-emerald-600" /> Studio Headquarters
                 </span>
-                <div className="text-sm font-bold text-slate-900">
-                  Durgapur, West Bengal, India
+                <div className="text-sm font-bold text-slate-900 leading-relaxed">
+                  29th, Harshabardhan Rd, A-Zone<br />
+                  Durgapur, West Bengal 713204
                 </div>
-                <p className="text-xs text-slate-500">
+                <p className="text-xs text-slate-500 pt-1">
                   Serving businesses locally across Durgapur, Asansol, Kolkata, and globally.
                 </p>
               </div>
@@ -285,6 +286,25 @@ export function ContactPage({ onSuccess }: ContactPageProps) {
                 </button>
               </form>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-3xl bg-white border border-slate-200 p-3 sm:p-4 shadow-xs">
+          <div className="w-full h-[400px] rounded-2xl overflow-hidden border border-slate-100">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              frameBorder="0" 
+              scrolling="no" 
+              marginHeight={0} 
+              marginWidth={0} 
+              src="https://maps.google.com/maps?q=29th,%20Harshabardhan%20Rd,%20A-Zone,%20Durgapur,%20West%20Bengal%20713204&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              title="Hinton Evolution Tech Location"
+              style={{ filter: "grayscale(20%) contrast(1.1)" }}
+            ></iframe>
           </div>
         </div>
       </section>
