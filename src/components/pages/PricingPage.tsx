@@ -45,15 +45,15 @@ export function PricingPage({ onOpenConsultation }: PricingPageProps) {
         </div>
 
         {/* Payment Method Selector & Guaranteed 0% Interest Banner */}
-        <div className="mt-10 flex flex-col items-center space-y-4">
+        <div className="mt-10 flex flex-col items-center space-y-4 px-2 sm:px-0">
           {/* Main Toggle Bar */}
-          <div className="inline-flex bg-[#0f172a] p-1.5 rounded-full border border-slate-800 shadow-xl items-center gap-1">
+          <div className="flex flex-col sm:flex-row bg-[#0f172a] p-1.5 rounded-[24px] sm:rounded-full border border-slate-800 shadow-xl items-stretch sm:items-center gap-1 w-full max-w-[280px] sm:max-w-none sm:w-auto">
             {/* One-Time Payment Button */}
             <button
               onClick={() => setPaymentMode('onetime')}
-              className={`relative px-6 py-2.5 rounded-full text-sm font-bold flex items-center justify-center gap-2.5 transition-all cursor-pointer ${
+              className={`relative px-4 sm:px-6 py-3 sm:py-2.5 rounded-full text-sm font-bold flex items-center justify-center gap-2.5 transition-all cursor-pointer whitespace-nowrap ${
                 paymentMode === 'onetime'
-                  ? 'bg-slate-800 text-white shadow-sm'
+                  ? 'bg-violet-600 text-white shadow-[0_0_15px_rgba(124,58,237,0.3)]'
                   : 'text-slate-300 hover:text-white'
               }`}
             >
@@ -64,7 +64,7 @@ export function PricingPage({ onOpenConsultation }: PricingPageProps) {
             {/* 6-Month Easy EMI Button */}
             <button
               onClick={() => setPaymentMode('emi')}
-              className={`relative px-6 py-2.5 rounded-full text-sm font-bold flex items-center justify-center gap-2 transition-all cursor-pointer ${
+              className={`relative px-4 sm:px-6 py-3 sm:py-2.5 rounded-full text-sm font-bold flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
                 paymentMode === 'emi'
                   ? 'bg-[#00E5FF] text-[#0f172a] shadow-[0_0_20px_rgba(0,229,255,0.25)]'
                   : 'text-slate-300 hover:text-white'
@@ -81,17 +81,17 @@ export function PricingPage({ onOpenConsultation }: PricingPageProps) {
           </div>
 
           {/* Subtitle / Sub-banner from reference image */}
-          <div className="inline-flex bg-[#1e293b] rounded-[14px] px-5 py-3 items-center gap-3 text-sm shadow-sm border border-slate-700/60">
-            <Info className="w-[18px] h-[18px] text-[#00E5FF] shrink-0" />
-            <p className="leading-relaxed font-mono text-sm tracking-tight text-slate-200">
-              <span className="text-[#00E5FF] font-bold">Easy Installment Plan:</span>{' '}
+          <div className="flex bg-[#1e293b] rounded-[14px] px-4 sm:px-5 py-3 items-start sm:items-center gap-3 text-sm shadow-sm border border-slate-700/60 w-full max-w-sm sm:max-w-none sm:w-auto">
+            <Info className="w-[18px] h-[18px] text-[#00E5FF] shrink-0 mt-0.5 sm:mt-0" />
+            <p className="leading-relaxed font-mono text-xs sm:text-sm tracking-tight text-slate-200 text-left sm:text-center">
+              <span className="text-[#00E5FF] font-bold block sm:inline mb-1 sm:mb-0">Easy Installment Plan:</span>{' '}
               40% Advance to start + 6 Monthly EMIs (0% Interest)
             </p>
           </div>
 
           {/* Surcharge Guarantee Note */}
-          <div className="flex items-center gap-2.5 text-[13px] text-slate-500 font-medium px-1 mt-1">
-            <ShieldCheck className="w-[18px] h-[18px] text-emerald-500 shrink-0" />
+          <div className="flex items-start sm:items-center gap-2.5 text-xs sm:text-[13px] text-slate-500 font-medium px-2 sm:px-1 mt-1 max-w-sm sm:max-w-none text-left sm:text-center">
+            <ShieldCheck className="w-4 h-4 sm:w-[18px] sm:h-[18px] text-emerald-500 shrink-0 mt-0.5 sm:mt-0" />
             <p>
               Both payment methods ultimately cost the exact same amount because the EMI plan has <strong className="text-slate-600 font-semibold">0% interest and no hidden surcharges.</strong>
             </p>
