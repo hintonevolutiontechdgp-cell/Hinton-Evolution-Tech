@@ -1,5 +1,5 @@
 import { PageId } from '../types';
-import { Phone, Mail, MapPin, ArrowUpRight, Sparkles, MessageCircle, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUpRight, Sparkles, MessageCircle, Instagram, Facebook } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: PageId) => void;
@@ -99,6 +99,15 @@ export function Footer({ onNavigate, onOpenConsultation }: FooterProps) {
                 <Instagram className="w-4 h-4 text-[#E1306C] shrink-0" />
                 <span>@hinton.evolution.tech</span>
               </a>
+              <a 
+                href="https://www.facebook.com/share/1EQvA4qaUC/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-[#1877F2] transition-colors break-all"
+              >
+                <Facebook className="w-4 h-4 text-[#1877F2] shrink-0" />
+                <span>Hinton Evolution Tech</span>
+              </a>
               <div className="flex items-center gap-2 text-slate-400">
                 <MapPin className="w-4 h-4 text-slate-400 shrink-0" />
                 <span>Durgapur, West Bengal, India</span>
@@ -195,6 +204,15 @@ export function Footer({ onNavigate, onOpenConsultation }: FooterProps) {
               aria-label="Follow us on Instagram"
             >
               <Instagram className="w-4 h-4" />
+            </a>
+            <a 
+              href="https://www.facebook.com/share/1EQvA4qaUC/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-[#1877F2] transition-colors flex items-center gap-1.5"
+              aria-label="Follow us on Facebook"
+            >
+              <Facebook className="w-4 h-4" />
             </a>
             <span>Durgapur, WB • Global Delivery</span>
             <button
