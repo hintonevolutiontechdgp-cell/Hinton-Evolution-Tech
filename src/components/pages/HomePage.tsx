@@ -141,12 +141,9 @@ export function HomePage({ onNavigate, onOpenConsultation }: HomePageProps) {
               className="rounded-2xl bg-white border border-slate-200 p-6 flex flex-col justify-between hover:border-violet-300 hover:shadow-md transition-all group"
             >
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
+                <div className="flex items-start">
                   <span className="text-[10px] font-semibold text-violet-700 bg-violet-50 px-2.5 py-1 rounded-md">
                     {srv.category}
-                  </span>
-                  <span className="text-xs font-mono font-bold text-slate-900">
-                    {srv.price}
                   </span>
                 </div>
 
@@ -170,7 +167,7 @@ export function HomePage({ onNavigate, onOpenConsultation }: HomePageProps) {
 
               <div className="pt-6 border-t border-slate-100 mt-4">
                 <button
-                  onClick={() => onOpenConsultation(`${srv.name} (${srv.price})`)}
+                  onClick={() => onOpenConsultation(srv.name)}
                   className="w-full py-2.5 rounded-lg bg-slate-50 hover:bg-violet-50 text-slate-700 hover:text-violet-700 font-bold text-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <span>Inquire Scope</span>
