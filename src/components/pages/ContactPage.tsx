@@ -16,7 +16,7 @@ export function ContactPage({ onSuccess }: ContactPageProps) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
-  const [service, setService] = useState('Starter Website (₹20,000)');
+  const [service, setService] = useState('Starter Website');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -250,9 +250,9 @@ export function ContactPage({ onSuccess }: ContactPageProps) {
                       onChange={(e) => setService(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs focus:outline-none focus:border-violet-500 transition-colors"
                     >
-                      <option value="Starter Website (₹20,000)">Starter Website (₹20,000)</option>
-                      <option value="Business Website (₹40,000)">Business Website (₹40,000)</option>
-                      <option value="Premium Corporate (₹80,000)">Premium Corporate (₹80,000)</option>
+                      <option value="Starter Website">Starter Website</option>
+                      <option value="Business Website">Business Website</option>
+                      <option value="Premium Corporate">Premium Corporate</option>
                       <option value="Custom Web App / Portal">Custom Web App / Portal</option>
                       <option value="E-Commerce & Shopify">E-Commerce & Online Store</option>
                       <option value="SEO & Google Maps Ranking">SEO & Local Google Maps Ranking</option>
