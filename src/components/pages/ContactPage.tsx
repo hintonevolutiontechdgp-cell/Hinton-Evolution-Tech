@@ -279,10 +279,19 @@ export function ContactPage({ onSuccess }: ContactPageProps) {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs tracking-wider uppercase transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-4 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-extrabold text-xs tracking-wider uppercase transition-all shadow-[0_4px_20px_rgba(124,58,237,0.3)] flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>{isSubmitting ? 'Dispatching...' : 'Submit Inquiry & Get Free Roadmap'}</span>
+                  <Send className="w-4 h-4 shrink-0" />
+                  <span>
+                    {isSubmitting ? (
+                      'Dispatching...'
+                    ) : (
+                      <>
+                        <span className="sm:hidden">Submit Inquiry</span>
+                        <span className="hidden sm:inline">Submit Inquiry & Get Free Roadmap</span>
+                      </>
+                    )}
+                  </span>
                 </button>
               </form>
             </div>
