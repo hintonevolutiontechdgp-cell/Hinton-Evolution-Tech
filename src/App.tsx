@@ -17,10 +17,40 @@ import { ContactPage } from './components/pages/ContactPage';
 import { PolicyPage } from './components/pages/PolicyPage';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<PageId>('home');
+  const getInitialPage = (): PageId => {
+    if (typeof window === 'undefined') return 'home';
+    const path = window.location.pathname.toLowerCase().replace(/^\/+/, '').replace(/\/+$/, '');
+    
+    // Map common SEO or old indexed URLs to our internal PageIds
+    if (path === 'about-us') return 'about';
+    if (path === 'contact-us') return 'contact';
+    if (path === 'our-work') return 'portfolio';
+    
+    const validPages: PageId[] = [
+      'home', 'services', 'about', 'solutions', 'portfolio', 'pricing', 
+      'process', 'contact', 'privacy', 'refund', 'cancellation', 
+      'duration', 'late', 'terms'
+    ];
+    
+    if (validPages.includes(path as PageId)) {
+      return path as PageId;
+    }
+    return 'home';
+  };
+
+  const [currentPage, setCurrentPage] = useState<PageId>(getInitialPage());
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const [selectedPackageForModal, setSelectedPackageForModal] = useState('General Web Consultation');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+
+  // Listen for browser back/forward navigation
+  useEffect(() => {
+    const handlePopState = () => {
+      setCurrentPage(getInitialPage());
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   // Auto-dismiss toast
   useEffect(() => {
@@ -35,6 +65,10 @@ export default function App() {
   const handleNavigate = (page: PageId) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Update the browser URL for direct linking and SEO
+    const newPath = page === 'home' ? '/' : `/${page}`;
+    window.history.pushState({}, '', newPath);
   };
 
   const handleOpenConsultation = (pkgName?: string) => {
