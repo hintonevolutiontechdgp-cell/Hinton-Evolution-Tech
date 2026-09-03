@@ -31,16 +31,6 @@ export function HomePage({ onNavigate, onOpenConsultation }: HomePageProps) {
       {/* Exact Hero Section from Screenshot */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20">
         <div className="max-w-5xl space-y-6 text-left">
-          {/* SEO Tag over headline */}
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-[11px] font-bold uppercase tracking-wider"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-violet-600" />
-            <span>Premium Web Design Company in Durgapur</span>
-          </motion.div>
-
           {/* Main Headline matching image typography and gradient colors */}
           <motion.h1
             initial={{ opacity: 0, y: 15 }}
