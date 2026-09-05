@@ -73,7 +73,7 @@ export function HomePage({ onNavigate, onOpenConsultation }: HomePageProps) {
             <div className="space-y-1">
               <div className="text-2xl font-black text-slate-900 flex items-center gap-1">
                 <span>98+</span>
-                <span className="text-emerald-600 text-sm font-bold">score</span>
+                <span className="text-emerald-700 text-sm font-bold">score</span>
               </div>
               <div className="text-xs text-slate-500 font-medium">Google PageSpeed Mobile</div>
             </div>
@@ -286,25 +286,25 @@ export function HomePage({ onNavigate, onOpenConsultation }: HomePageProps) {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-2">
               <div className="text-2xl font-black text-violet-400 font-mono">01</div>
-              <h4 className="text-sm font-bold text-white">Discovery & Wireframing</h4>
+              <h3 className="text-sm font-bold text-white">Discovery & Wireframing</h3>
               <p className="text-xs text-slate-400">User journeys, feature mapping, and 30% milestone initiation.</p>
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-2">
               <div className="text-2xl font-black text-cyan-400 font-mono">02</div>
-              <h4 className="text-sm font-bold text-white">Engineering & UI</h4>
+              <h3 className="text-sm font-bold text-white">Engineering & UI</h3>
               <p className="text-xs text-slate-400">React/Next.js frontend, secure APIs, and dynamic CMS elements.</p>
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-2">
               <div className="text-2xl font-black text-emerald-400 font-mono">03</div>
-              <h4 className="text-sm font-bold text-white">QA & Speed Auditing</h4>
+              <h3 className="text-sm font-bold text-white">QA & Speed Auditing</h3>
               <p className="text-xs text-slate-400">95+ PageSpeed checks, mobile ergonomics, and SSL security.</p>
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-2">
               <div className="text-2xl font-black text-amber-400 font-mono">04</div>
-              <h4 className="text-sm font-bold text-white">Launch & Code Transfer</h4>
+              <h3 className="text-sm font-bold text-white">Launch & Code Transfer</h3>
               <p className="text-xs text-slate-400">100% repository handover, DNS setup, and warranty support.</p>
             </div>
           </div>
