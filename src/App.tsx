@@ -5,9 +5,9 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
 import { Toast } from './components/Toast';
+import { HomePage } from './components/pages/HomePage';
 
-// Lazy load page components to reduce initial bundle size
-const HomePage = lazy(() => import('./components/pages/HomePage').then(m => ({ default: m.HomePage })));
+// Lazy load other page components to reduce initial bundle size, but eagerly load HomePage for LCP performance
 const ServicesPage = lazy(() => import('./components/pages/ServicesPage').then(m => ({ default: m.ServicesPage })));
 const AboutPage = lazy(() => import('./components/pages/AboutPage').then(m => ({ default: m.AboutPage })));
 const SolutionsPage = lazy(() => import('./components/pages/SolutionsPage').then(m => ({ default: m.SolutionsPage })));
@@ -107,7 +107,7 @@ export default function App() {
             <div className="w-10 h-10 border-4 border-slate-100 border-t-violet-600 rounded-full animate-spin"></div>
           </div>
         }>
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={currentPage}
             initial={{ opacity: 0, y: 8 }}
