@@ -1,6 +1,5 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
-import { ViteWebfontDownload } from 'vite-plugin-webfont-dl';
 import path from 'path';
 import {defineConfig} from 'vite';
 
@@ -8,8 +7,7 @@ export default defineConfig(() => {
   return {
     plugins: [
       react(), 
-      tailwindcss(),
-      ViteWebfontDownload()
+      tailwindcss()
     ],
     resolve: {
       alias: {
