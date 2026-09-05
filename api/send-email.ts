@@ -43,8 +43,8 @@ export default async function handler(req: any, res: any) {
         You have received a new inquiry!
         
         Form Type: ${formType}
-        ${packageName ? \`Package: \${packageName}\` : ""}
-        ${service ? \`Service Requested: \${service}\` : ""}
+        ${packageName ? "Package: " + packageName : ""}
+        ${service ? "Service Requested: " + service : ""}
         
         Name: ${name}
         Phone: ${phone}
