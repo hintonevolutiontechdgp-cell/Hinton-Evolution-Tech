@@ -92,7 +92,7 @@ export function Header({ currentPage, onNavigate, onOpenConsultation }: HeaderPr
             >
               <div className="w-11 h-11 rounded-xl bg-[#0F172A] flex items-center justify-center shadow-xs overflow-hidden border border-slate-200/60 p-1">
                 <img
-                  src="/android-chrome-192x192.png"
+                  src="/favicon-48x48.png"
                   alt="Hinton Evolution Tech Logo"
                   className="w-full h-full object-contain"
                   onError={(e) => {
