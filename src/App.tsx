@@ -1,20 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { PageId } from './types';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
 import { Toast } from './components/Toast';
-import { HomePage } from './components/pages/HomePage';
-import { ServicesPage } from './components/pages/ServicesPage';
-import { AboutPage } from './components/pages/AboutPage';
-import { SolutionsPage } from './components/pages/SolutionsPage';
-import { PricingPage } from './components/pages/PricingPage';
-import { PortfolioPage } from './components/pages/PortfolioPage';
-import { ProcessPage } from './components/pages/ProcessPage';
-import { ContactPage } from './components/pages/ContactPage';
-import { PolicyPage } from './components/pages/PolicyPage';
-import { FaqPage } from './components/pages/FaqPage';
+
+// Lazy load page components to reduce initial bundle size
+const HomePage = lazy(() => import('./components/pages/HomePage').then(m => ({ default: m.HomePage })));
+const ServicesPage = lazy(() => import('./components/pages/ServicesPage').then(m => ({ default: m.ServicesPage })));
+const AboutPage = lazy(() => import('./components/pages/AboutPage').then(m => ({ default: m.AboutPage })));
+const SolutionsPage = lazy(() => import('./components/pages/SolutionsPage').then(m => ({ default: m.SolutionsPage })));
+const PricingPage = lazy(() => import('./components/pages/PricingPage').then(m => ({ default: m.PricingPage })));
+const PortfolioPage = lazy(() => import('./components/pages/PortfolioPage').then(m => ({ default: m.PortfolioPage })));
+const ProcessPage = lazy(() => import('./components/pages/ProcessPage').then(m => ({ default: m.ProcessPage })));
+const ContactPage = lazy(() => import('./components/pages/ContactPage').then(m => ({ default: m.ContactPage })));
+const PolicyPage = lazy(() => import('./components/pages/PolicyPage').then(m => ({ default: m.PolicyPage })));
+const FaqPage = lazy(() => import('./components/pages/FaqPage').then(m => ({ default: m.FaqPage })));
 
 export default function App() {
   const getInitialPage = (): PageId => {
@@ -99,8 +101,13 @@ export default function App() {
       />
 
       {/* Dynamic Content Views */}
-      <main className="flex-grow">
-        <AnimatePresence mode="wait">
+      <main className="flex-grow relative">
+        <Suspense fallback={
+          <div className="absolute inset-0 flex items-center justify-center bg-white min-h-[50vh]">
+            <div className="w-10 h-10 border-4 border-slate-100 border-t-violet-600 rounded-full animate-spin"></div>
+          </div>
+        }>
+          <AnimatePresence mode="wait">
           <motion.div
             key={currentPage}
             initial={{ opacity: 0, y: 8 }}
@@ -172,6 +179,7 @@ export default function App() {
             )}
           </motion.div>
         </AnimatePresence>
+        </Suspense>
       </main>
 
       {/* Global Comprehensive Footer */}
