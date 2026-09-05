@@ -127,25 +127,47 @@ export function ContactPage({ onSuccess }: ContactPageProps) {
               </a>
 
               {/* Email */}
-              <a
-                href="mailto:hintonevolutiontechdgp@gmail.com"
-                className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-violet-300 transition-all shadow-xs group"
-              >
-                <div className="flex items-start justify-between">
-                  <div className="space-y-1">
-                    <span className="text-xs font-bold text-slate-500 flex items-center gap-2">
-                      <Mail className="w-4 h-4 text-blue-600" /> Official Email
-                    </span>
-                    <div className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors break-all">
-                      hintonevolutiontechdgp@gmail.com
+              <div className="space-y-4">
+                <a
+                  href="mailto:hintonevolutiontechdgp@gmail.com"
+                  className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-violet-300 transition-all shadow-xs group"
+                >
+                  <div className="flex items-start justify-between">
+                    <div className="space-y-1">
+                      <span className="text-xs font-bold text-slate-500 flex items-center gap-2">
+                        <Mail className="w-4 h-4 text-blue-600" /> Official Email
+                      </span>
+                      <div className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors break-all">
+                        hintonevolutiontechdgp@gmail.com
+                      </div>
+                      <span className="text-xs text-slate-500">Typical response time: under 2 hours</span>
                     </div>
-                    <span className="text-xs text-slate-500">Typical response time: under 2 hours</span>
+                    <span className="text-xs font-bold text-blue-600">
+                      Write →
+                    </span>
                   </div>
-                  <span className="text-xs font-bold text-blue-600">
-                    Write →
-                  </span>
-                </div>
-              </a>
+                </a>
+
+                <a
+                  href="mailto:businessmaildgp@gmail.com"
+                  className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-emerald-300 transition-all shadow-xs group"
+                >
+                  <div className="flex items-start justify-between">
+                    <div className="space-y-1">
+                      <span className="text-xs font-bold text-slate-500 flex items-center gap-2">
+                        <Mail className="w-4 h-4 text-emerald-600" /> Business Email
+                      </span>
+                      <div className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-emerald-600 transition-colors break-all">
+                        businessmaildgp@gmail.com
+                      </div>
+                      <span className="text-xs text-slate-500">For business proposals & partnerships</span>
+                    </div>
+                    <span className="text-xs font-bold text-emerald-600">
+                      Write →
+                    </span>
+                  </div>
+                </a>
+              </div>
 
               {/* Office Location */}
               <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-3 shadow-xs">
