@@ -36,7 +36,7 @@ export function Footer({ onNavigate, onOpenConsultation }: FooterProps) {
             <div className="flex items-center gap-3">
               <div className="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-white font-extrabold text-lg overflow-hidden p-1">
                 <img
-                  src="/android-chrome-192x192.png"
+                  src="/favicon-48x48.png"
                   alt="Hinton Evolution Tech Logo"
                   className="w-full h-full object-contain"
                   onError={(e) => {
