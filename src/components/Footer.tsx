@@ -91,6 +91,13 @@ export function Footer({ onNavigate, onOpenConsultation }: FooterProps) {
                 <Mail className="w-4 h-4 text-cyan-400 shrink-0" />
                 <span>hintonevolutiontechdgp@gmail.com</span>
               </a>
+              <a
+                href="mailto:businessmaildgp@gmail.com"
+                className="flex items-center gap-2 hover:text-emerald-300 transition-colors break-all"
+              >
+                <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>businessmaildgp@gmail.com</span>
+              </a>
               <div className="flex items-center gap-2 text-slate-400">
                 <MapPin className="w-4 h-4 text-slate-400 shrink-0" />
                 <span>Durgapur, West Bengal, India</span>
