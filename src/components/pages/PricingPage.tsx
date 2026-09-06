@@ -20,7 +20,7 @@ interface PricingPageProps {
 }
 
 export function PricingPage({ onOpenConsultation }: PricingPageProps) {
-  const [paymentMode, setPaymentMode] = useState<'onetime' | 'emi'>('emi');
+  const [paymentMode, setPaymentMode] = useState<'onetime' | 'emi'>('onetime');
 
   return (
     <>
