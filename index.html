@@ -25,7 +25,16 @@
     </noscript>
   </head>
   <body class="bg-white text-slate-900 font-sans antialiased selection:bg-violet-600 selection:text-white">
-    <div id="root"></div>
+    <div id="root">
+      <style>
+        .initial-loader { display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #ffffff; }
+        .spinner { width: 40px; height: 40px; border: 3px solid #f1f5f9; border-top: 3px solid #7c3aed; border-radius: 50%; animation: spin 0.8s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      </style>
+      <div class="initial-loader">
+        <div class="spinner"></div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
