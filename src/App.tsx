@@ -33,7 +33,7 @@ export default function App() {
     if (path === 'about-us') return { page: 'about' };
     if (path === 'contact-us') return { page: 'contact' };
     if (path === 'our-work' || path === 'portfolio' || path.includes('our-work') || path.includes('portfolio')) return { page: 'portfolio' };
-    if (path === 'policy' || path.includes('policy')) return { page: 'policies' };
+    if (path === 'policy' || path.includes('policy')) return { page: 'privacy' };
     
     const validPages: PageId[] = [
       'home', 'services', 'about', 'solutions', 'portfolio', 'pricing', 
