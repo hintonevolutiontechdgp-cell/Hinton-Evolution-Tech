@@ -8,6 +8,7 @@ import {
   Check,
   Cpu
 } from 'lucide-react';
+import { SEO } from '../SEO';
 
 interface SolutionsPageProps {
   onOpenConsultation: (pkg?: string) => void;
