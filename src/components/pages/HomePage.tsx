@@ -32,17 +32,14 @@ export function HomePage({ onNavigate, onOpenConsultation }: HomePageProps) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20">
         <div className="max-w-5xl space-y-6 text-left">
           {/* Main Headline matching image typography and gradient colors */}
-          <motion.h1
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
+          <h1
             className="text-4xl sm:text-6xl lg:text-[72px] font-black text-[#0B1120] tracking-tight leading-[1.08]"
           >
             Build a <span className="gradient-text-premium">premium</span> <span className="gradient-text-digital">digital</span>{' '}
             <span className="gradient-text-presence">presence</span> that makes your{' '}
             <br className="hidden sm:inline" />
             business ready to grow.
-          </motion.h1>
+          </h1>
 
           {/* Subtitle / Intro for SEO */}
           <p className="text-[#475569] text-base sm:text-lg leading-relaxed max-w-3xl font-normal pt-2">
